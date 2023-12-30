@@ -1,0 +1,191 @@
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 95% 6%; 
+    grid-template-areas:
+    "menu"
+    "productos"
+    "footer";
+}
+.menu {
+    background-color: #86A789;
+    grid-area: menu; 
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+h1{
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 2;
+    font-family: 'Rubik Glitch', sans-serif;
+}
+.logo {
+    margin-top: 8px;
+    margin-left: 8px;
+    color: white;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 16px;
+    column-gap: 2rem;
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+}
+.lista a{
+    text-decoration: none;    
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'EB Garamond', sans-serif; 
+}
+
+.lista a:hover{
+    color: grey;
+}
+
+.productos {
+    background-color: #D2E3C8;
+    border: 1px solid white;
+    grid-area: productos; 
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.reloj{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #4F6F52;
+    border: 1px solid white;
+    grid-area: footer; 
+}
+
+.card{
+    height: auto;
+    width: 300px;
+    opacity: 50%;
+}
+
+.card:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    transform: translateY(-15px);
+}
+
+img{
+    height: 88%;
+    width: 88%;
+    border-radius: 10%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ayuda{
+    padding-top: 10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.ayuda p{
+    color: black;
+}
+
+.logotipo h3{
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.logotipo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logotipo a{
+    padding-left: 35%;
+}
+
+.ubicacion{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 23px;
+}
+
+i{
+    color: black;
+}
+
+@media(min-width: 576px){
+    .container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 20% 80%; 
+        grid-template-rows: 75% 25%; 
+        grid-template-areas: 
+          "menu productos"
+          "footer productos"; 
+        height: 100vh;
+      }
+    .menu { 
+        grid-area: menu; 
+    }
+    .lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lista a{
+        padding-top: 5%;
+        text-decoration: none;
+        color: black;
+    }
+    .footer { 
+        grid-area: footer; 
+        display: flex;
+        justify-content: center;
+    }
+    .productos{
+        grid-area: productos;
+    }
+    .reloj{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 6%;
+    }
+    .logotipo a{
+        padding-left: 23%;
+        color: black;
+    }
+    .ayuda{
+        text-align: center;
+    }
+}
